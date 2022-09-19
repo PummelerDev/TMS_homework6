@@ -57,7 +57,7 @@ public class Main {
 		multiplyByNumber.printMatrix();
 		
 		Matrix multiply = matrix.multiply(matrix1);
-		multiply.printMatrix();
+		multiplyByNumber.printMatrix();
 	}
 
 }
