@@ -38,26 +38,26 @@ public class Main {
 
 //		
 //		ATM task
-//		Atm payoneer = new Atm(100, 100, 100);
-//		payoneer.addMoney(50, 50, 50);
-//		payoneer.withdrawMoney();
-//		payoneer.atmInfo();
+		Atm payoneer = new Atm(100, 100, 100);
+		payoneer.addMoney(100, 100, 100);
+		payoneer.withdrawMoney();
+		payoneer.atmInfo();
 
 //		
 //		Matrix task
-		Matrix matrix = new Matrix(3, 3);
-		matrix.printMatrix();
-		Matrix matrix1 = new Matrix(3, 3);
-		matrix1.printMatrix();
-		
-		Matrix plus = matrix.plus(matrix1);
-		plus.printMatrix();
-		
-		Matrix multiplyByNumber = matrix.multiplyByNumber(10);
-		multiplyByNumber.printMatrix();
-		
-		Matrix multiply = matrix.multiply(matrix1);
-		multiplyByNumber.printMatrix();
+//		Matrix matrix = new Matrix(3, 3);
+//		matrix.printMatrix();
+//		Matrix matrix1 = new Matrix(3, 3);
+//		matrix1.printMatrix();
+//		
+//		Matrix plus = matrix.plus(matrix1);
+//		plus.printMatrix();
+//		
+//		Matrix multiplyByNumber = matrix.multiplyByNumber(10);
+//		multiplyByNumber.printMatrix();
+//		
+//		Matrix multiply = matrix.multiply(matrix1);
+//		multiplyByNumber.printMatrix();
 	}
 
 }

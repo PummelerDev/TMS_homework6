@@ -58,7 +58,7 @@ public class Atm {
 			System.out.println("enter sum of money: ");
 			if (scan.hasNextInt()) {
 				int i = scan.nextInt();
-				if (i % 20 == 0 || i % 50 == 0) {
+				if (i % 10 == 0 && i != 10 && i != 30 ) {
 					input = i;
 					scan.close();
 					return input;
@@ -92,31 +92,30 @@ public class Atm {
 	private void toGiveMoney(int input) {
 		System.out.println("Your money: ");
 		while (true) {
-			if (input >= this.hundret.value) {
+			if (input >= this.hundret.value && input <= this.hundret.value * this.hundret.quantity
+					&& (input % this.fifty.value <= 0)) {
 				input = calculation(input, this.hundret.value, this.hundret.quantity);
 			}
-			if (input >= this.fifty.value && input%this.fifty.value==0) {
+			if (input >= this.fifty.value && input <= this.fifty.value * this.fifty.quantity
+					&& (input % this.twenty.value > 0)) {
 				input = calculation(input, this.fifty.value, this.fifty.quantity);
 			}
-			if (input >= this.twenty.value) {
+			if (input >= this.twenty.value && input <= this.twenty.value * this.twenty.quantity
+					&& input >= this.twenty.value) {
 				input = calculation(input, this.twenty.value, this.twenty.quantity);
 			}
 			System.out.println();
-			if (input > 0)
-				System.out.println("Error");
-			break;
+			if (input == 0)
+//				System.out.println("Error");
+				break;
 		}
 
 	}
 
 	private int calculation(int input, int value, int quantity) {
-		int i = 0;
-		while (i < quantity && input >= value) {
-			input -= value;
-			i++;
-		}
-		System.out.print(i + " x " + value + "$, ");
-		removeBanknote(i, value);
+		input -= value;
+		System.out.print(1 + " x " + value + "$, ");
+		removeBanknote(1, value);
 		return input;
 	}
 
